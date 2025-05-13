@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<link rel="icon" type="image/x-icon" href="image/1738998159292.png">
+<title>Linktree Simple</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #66d4ea, #0b3feb);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-touch-callout: none; /* disable callout, tap hold ios */
+    -webkit-user-select: none; /* disable selection */
+    user-select: none;
+  }
+  .container {
+    width: 100%;
+    max-width: 350px;
+    max-height: 600px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 32px 24px;
+    box-sizing: border-box;
+    text-align: center;
+    box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+    overflow: hidden;
+  }
+  .profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: #fff;
+    margin: 0 auto 16px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    background-image: url('image/IMG_5960.JPG');
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+    transition: 1s;
+    transition-delay: 1s;
+  }
+  .profile-img:hover {
+    width: 150px;
+    height: 150px;
+  }
+  h1 {
+    margin: 0 0 24px;
+    font-weight: 600;
+    font-size: 1.8rem;
+    letter-spacing: 0.05em;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  }
+  .links {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .link-btn {
+    background: rgba(255, 255, 255, 0.15);
+    border: none;
+    border-radius: 16px;
+    padding: 14px 0;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: background 0.3s ease, transform 0.15s ease;
+    user-select: none;
+  }
+  .link-btn:active {
+    transform: scale(0.98);
+    background: rgba(255, 255, 255, 0.3);
+  }
+  .link-btn:hover {
+    background: rgba(255, 255, 255, 0.25);
+    cursor: pointer;
+  }
+  @media (max-height: 600px) {
+    .container {
+      max-height: 600px;
+    }
+  }
+  @media (max-width: 350px) {
+    .container {
+      max-width: 350px;
+      padding: 28px 16px;
+    }
+    h1 {
+      font-size: 1.5rem;
+    }
+    .profile-img {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 14px;
+    }
+    .link-btn {
+      font-size: 1rem;
+      padding: 12px 0;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="container" role="main" aria-label="Linktree simple page">
+    <div class="profile-img" role="img" aria-label="Profile picture"></div>
+    <h1>EKA RAMDANI</h1>
+    <nav class="links" aria-label="Link list">
+      <a href="https://youtube.com/@ekaramdani07?si=PndgST1rRe_RyJ2X" target="_blank" rel="noopener" class="link-btn">YouTube Channel</a>
+      <a href="https://www.instagram.com/eka_rmd07/?__pwa=1" target="_blank" rel="noopener" class="link-btn">INSTAGRAM</a>
+      <a href="https://www.tiktok.com/@eka.ramdani2007?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener" class="link-btn">TIKTOK</a>
+      <a href="https://wa.me/6285150880562?text=p,%20gelud" target="_blank" rel="noopener" class="link-btn">WHATSAPP</a>
+    </nav>
+  </div>
+</body>
+</html>
+
