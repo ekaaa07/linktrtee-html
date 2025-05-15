@@ -49,10 +49,6 @@
     transition-delay: 45ms;
     cursor: pointer;
   }
-  .profile-img:hover {
-    width: 125px;
-    height: 125px;
-  }
   h1 {
     margin: 0 0 24px;
     font-weight: 600;
@@ -122,12 +118,25 @@
       <a href="https://www.tiktok.com/@eka.ramdani2007?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener" class="link-btn">TIKTOK &#x1F60B;</a>
       <a href="https://wa.me/6285150880562?text=p,%20gelud" target="_blank" rel="noopener" class="link-btn">WHATSAPP</a>
     </nav>
+    <nav aria-label="Link list"  style="margin-top: 10px;">
+      <button onclick="playAudio()" type="button">&#x1F9CF;</button>
+      <button onclick="pauseAudio()" type="button">&#x1F92B;</button>
+    </nav>
   </div>
-  <audio autoplay>
-     <source src="Backsound alur cerita di Facebook.mp3" type="audio/mpeg">
-     <source src="Backsound alur cerita di Facebook.mp3" type="audio/mpeg">
+  <audio id="myAudio">
      <source src="Backsound alur cerita di Facebook.mp3" type="audio/mpeg">
   </audio>
+  <script> 
+const audio = document.getElementById("myAudio");
+
+function playAudio() {
+  audio.play();
+}
+
+function pauseAudio() {
+  audio.pause();
+}
+</script> 
 </body>
 </html>
 
