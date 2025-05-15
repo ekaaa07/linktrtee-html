@@ -4,7 +4,6 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
 <link rel="icon" type="image/x-icon" href="image/1738998159292.png">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <title>Linktree</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -108,64 +107,13 @@
       font-size: 1rem;
       padding: 12px 0;
     }
-  }
-    .drag-menu {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  z-index: 9999;
-  background: linear-gradient(135deg, #6a11cb, #2575fc);
-  color: white;
-  border-radius: 12px;
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
-  cursor: grab;
-  user-select: none;
-  overflow: hidden;
-}
-
-.drag-menu ul {
-  list-style: none;
-  margin: 0;
-  padding: 10px 20px;
-}
-
-.drag-menu li {
-  display: flex;
-  align-items: center;
-  padding: 15px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-  font-size: 16px;
-  font-weight: bold;
-  transition: background 0.3s ease, transform 0.2s ease;
-  cursor: pointer;
-}
-
-.drag-menu li:last-child {
-  border-bottom: none;
-}
-
-.drag-menu li:hover {
-  background: rgba(255, 255, 255, 0.2);
-  transform: scale(1.05);
-}
-
-.material-icons {
-  margin-right: 10px;
-  font-size: 20px;
-  color: #ffeb3b;
-}
-
-.drag-menu:active {
-  cursor: grabbing;
-}
 </style>
 </head>
 <body>
 
-  
     <div id="drag-menu" class="drag-menu">
     <ul>
-      <li><a href="https://linktreeeblog.netlify.app/"><span class="material-icons">home</span>Home</a></li>
+      <li><a href="https://linktreeeblog.netlify.app/" target=""><span class="material-icons">home</span>Home</a></li>
       <li><span class="material-icons">info</span>Info</li>
       <li><span class="material-icons">contact_mail</span>Contact</li>
     </ul>
@@ -197,56 +145,6 @@ function playAudio() {
 
 function pauseAudio() {
   audio.pause();
-}
-    //menu 
-
-   const dragMenu = document.getElementById('drag-menu');
-
-// Variables to track dragging state
-let isDragging = false;
-let offsetX = 0;
-let offsetY = 0;
-
-// Add event listeners for touch and mouse events
-dragMenu.addEventListener('mousedown', startDrag);
-dragMenu.addEventListener('touchstart', startDrag);
-
-document.addEventListener('mousemove', drag);
-document.addEventListener('touchmove', drag);
-
-document.addEventListener('mouseup', stopDrag);
-document.addEventListener('touchend', stopDrag);
-
-function startDrag(e) {
-  isDragging = true;
-
-  // Normalize touch/mouse positions
-  const touch = e.touches ? e.touches[0] : e;
-  offsetX = touch.clientX - dragMenu.offsetLeft;
-  offsetY = touch.clientY - dragMenu.offsetTop;
-
-  dragMenu.style.transition = 'none'; // Disable transitions while dragging
-}
-
-function drag(e) {
-  if (!isDragging) return;
-
-  // Prevent default behavior
-  e.preventDefault();
-
-  // Normalize touch/mouse positions
-  const touch = e.touches ? e.touches[0] : e;
-  const x = touch.clientX - offsetX;
-  const y = touch.clientY - offsetY;
-
-  // Update menu position
-  dragMenu.style.left = `${x}px`;
-  dragMenu.style.top = `${y}px`;
-}
-
-function stopDrag() {
-  isDragging = false;
-  dragMenu.style.transition = '0.3s ease'; // Add smooth transition after dragging stops
 }
 </script> 
 </body>
